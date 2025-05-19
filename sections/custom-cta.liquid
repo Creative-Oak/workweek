@@ -1,0 +1,129 @@
+{%- liquid
+  assign accent_text = section.settings.accent_text
+  assign heading = section.settings.heading
+  assign text = section.settings.text
+  assign button_text = section.settings.button_text
+  assign button_link = section.settings.button_link
+  assign image = section.settings.image
+-%}
+
+{{ 'section-custom-cta.css' | asset_url | stylesheet_tag }}
+
+<section class="custom-cta page-width color-{{ section.settings.color_scheme }}">
+  <div class="custom-cta__inner">
+    <div class="custom-cta__image">
+      {%- if image != blank -%}
+        <img
+          src="{{ image | image_url: width: 800 }}"
+          alt="{{ image.alt | escape }}"
+          width="800"
+          height="600"
+          loading="lazy"
+        >
+      {%- else -%}
+        <div class="custom-cta__image-placeholder">
+          {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+        </div>
+      {%- endif -%}
+    </div>
+    <div class="custom-cta__content">
+      {%- if accent_text != blank -%}
+        <div class="custom-cta__accent">{{ accent_text }}</div>
+      {%- endif -%}
+      {%- if heading != blank -%}
+        <h2 class="custom-cta__heading">{{ heading }}</h2>
+      {%- endif -%}
+      {%- if text != blank -%}
+        <div class="custom-cta__text rte">{{ text }}</div>
+      {%- endif -%}
+      {%- if button_text != blank -%}
+        <a
+          {% if button_link == blank %}
+            role="link" aria-disabled="true"
+          {% else %}
+            href="{{ button_link }}"
+          {% endif %}
+          class="button{% if section.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+        >
+          {{- button_text -}}
+          {%- if section.settings.show_button_arrow -%}
+            <span class="button-arrow">{% render 'icon-button-arrow' %}</span>
+          {%- endif -%}
+        </a>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Custom CTA",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "accent_text",
+      "label": "Accent Text",
+      "default": "Accent Text"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Share information about your brand or promotion here.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "checkbox",
+      "id": "button_style_secondary",
+      "label": "Use Secondary Button Style",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_button_arrow",
+      "default": false,
+      "label": "Show arrow icon on button"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom CTA",
+      "settings": {
+        "accent_text": "Accent Text",
+        "heading": "Heading",
+        "text": "<p>Share information about your brand or promotion here.</p>",
+        "button_text": "Button Text"
+      }
+    }
+  ]
+}
+{% endschema %}

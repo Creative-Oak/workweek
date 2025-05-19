@@ -1,0 +1,271 @@
+{%- comment -%}
+  featured-course.liquid
+  Initial copy from featured-product.liquid for further adaptation.
+{%- endcomment -%}
+{%- liquid
+  assign product = section.settings.product
+  assign padding_top = section.settings.padding_top | default: 36
+  assign padding_bottom = section.settings.padding_bottom | default: 36
+  assign text_bg_color = section.settings.text_bg_color | default: '#d2b195'
+-%}
+
+{{ 'section-featured-course.css' | asset_url | stylesheet_tag }}
+
+<style>
+  .featured-course-{{ section.id }} {
+    --padding-top: {{ padding_top }}px;
+    --padding-bottom: {{ padding_bottom }}px;
+    --text-bg-color: {{ text_bg_color }};
+  }
+</style>
+
+<section class="featured-course-{{ section.id }} featured-course color-{{ section.settings.color_scheme }}">
+  <div class="featured-course-inner">
+    <div class="featured-course-image">
+      {%- if product != blank and product.featured_image != blank -%}
+        <img
+          src="{{ product.featured_image | image_url: width: 600 }}"
+          alt="{{ product.title | escape }}"
+          width="600"
+          height="600"
+        >
+      {%- else -%}
+        <div style="width:320px;height:320px;background:#eee;display:flex;align-items:center;justify-content:center;border-radius:8px;">
+          No image
+        </div>
+      {%- endif -%}
+    </div>
+    <div class="featured-course-text">
+      <div class="featured-course-text-inner">
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'heading' -%}
+              <h2 class="featured-course__heading {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>
+                {{ block.settings.heading }}
+              </h2>
+            {%- when 'text' -%}
+              <div class="rte featured-course__text" {{ block.shopify_attributes }}>
+                {{ block.settings.text }}
+              </div>
+            {%- when 'buttons' -%}
+              <div
+                class="featured-course__buttons{% if block.settings.button_text_1 != blank and block.settings.button_text_2 != blank %} featured-course__buttons--multiple{% endif %}"
+                {{ block.shopify_attributes }}
+              >
+                {%- if block.settings.button_text_1 != blank -%}
+                  <a
+                    {% if block.settings.button_link_1 == blank %}
+                      role="link" aria-disabled="true"
+                    {% else %}
+                      href="{{ block.settings.button_link_1 }}"
+                    {% endif %}
+                    class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"
+                  >
+                    {{- block.settings.button_text_1 -}}
+                    {%- if block.settings.show_button_arrow_1 -%}
+                      <span class="button-arrow">{% render 'icon-button-arrow' %}</span>
+                    {%- endif -%}
+                  </a>
+                {%- endif -%}
+                {%- if block.settings.button_text_2 != blank -%}
+                  <a
+                    {% if block.settings.button_link_2 == blank %}
+                      role="link" aria-disabled="true"
+                    {% else %}
+                      href="{{ block.settings.button_link_2 }}"
+                    {% endif %}
+                    class="button{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}"
+                  >
+                    {{- block.settings.button_text_2 -}}
+                    {%- if block.settings.show_button_arrow_2 -%}
+                      <span class="button-arrow">{% render 'icon-button-arrow' %}</span>
+                    {%- endif -%}
+                  </a>
+                {%- endif -%}
+              </div>
+          {%- endcase -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Featured Course",
+  "tag": "section",
+  "class": "section section-featured-course",
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Course Product"
+    },
+    {
+      "type": "color",
+      "id": "text_bg_color",
+      "label": "Text Background Color",
+      "default": "#d2b195"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 36
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "Heading",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Meet Your Yoga Instructor",
+          "label": "Heading"
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "options": [
+            {
+              "value": "h2",
+              "label": "t:sections.all.heading_size.options__1.label"
+            },
+            {
+              "value": "h1",
+              "label": "t:sections.all.heading_size.options__2.label"
+            },
+            {
+              "value": "h0",
+              "label": "t:sections.all.heading_size.options__3.label"
+            },
+            {
+              "value": "hxl",
+              "label": "t:sections.all.heading_size.options__4.label"
+            },
+            {
+              "value": "hxxl",
+              "label": "t:sections.all.heading_size.options__5.label"
+            }
+          ],
+          "default": "h2",
+          "label": "t:sections.all.heading_size.label"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Text",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "text",
+          "default": "Add a description for your featured course or instructor here.",
+          "label": "Text"
+        }
+      ]
+    },
+    {
+      "type": "buttons",
+      "name": "Buttons",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "header",
+          "content": "First Button"
+        },
+        {
+          "type": "text",
+          "id": "button_text_1",
+          "default": "Learn More",
+          "label": "Button Text"
+        },
+        {
+          "type": "url",
+          "id": "button_link_1",
+          "label": "Button Link"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_style_secondary_1",
+          "default": false,
+          "label": "Use secondary button style"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_button_arrow_1",
+          "default": false,
+          "label": "Show arrow icon"
+        },
+        {
+          "type": "header",
+          "content": "Second Button"
+        },
+        {
+          "type": "text",
+          "id": "button_text_2",
+          "default": "Shop Now",
+          "label": "Button Text"
+        },
+        {
+          "type": "url",
+          "id": "button_link_2",
+          "label": "Button Link"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_style_secondary_2",
+          "default": false,
+          "label": "Use secondary button style"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_button_arrow_2",
+          "default": false,
+          "label": "Show arrow icon"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Course",
+      "blocks": [
+        {
+          "type": "heading"
+        },
+        {
+          "type": "text"
+        },
+        {
+          "type": "buttons"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

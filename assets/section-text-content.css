@@ -1,0 +1,215 @@
+.text-content {
+  padding: 6rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.text-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0.4rem;
+  background: linear-gradient(90deg, 
+    rgb(var(--color-accent-1)) 0%,
+    rgb(var(--color-accent-2)) 50%,
+    rgb(var(--color-accent-3)) 100%
+  );
+  opacity: 0.8;
+}
+
+.text-content__wrapper {
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+
+
+/* Override page-width class when needed */
+.text-content--width-narrow.page-width,
+.text-content--width-standard.page-width,
+.text-content--width-wide.page-width,
+.text-content--width-full.page-width {
+  max-width: 100%;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.text-content__wrapper::after {
+  content: '';
+  position: absolute;
+  top: -2rem;
+  right: -2rem;
+  width: 15rem;
+  height: 15rem;
+  background: radial-gradient(
+    circle at center,
+    rgba(var(--color-accent-1), 0.1) 0%,
+    rgba(var(--color-accent-1), 0) 70%
+  );
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.text-content__accent {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+
+  display: inline-block;
+  font-weight: 500;
+  position: relative;
+  font-weight: 300;
+  border-radius: 2rem;
+}
+
+.text-content__heading {
+  margin-top: 0;
+  font-size: calc(var(--font-heading-scale) * 3.6rem);
+  line-height: 1.2;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.text-content__heading::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 4rem;
+  height: 0.3rem;
+  background: rgb(var(--color-accent-1));
+  border-radius: 0.2rem;
+}
+
+.text-content__content {
+  max-width: 80rem;
+
+  position: relative;
+  z-index: 1;
+}
+
+.text-content__content .rte {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  white-space: pre-wrap;
+}
+
+.text-content__content .rte p {
+  margin-bottom: 2rem;
+}
+
+.text-content__content .rte p:last-child {
+  margin-bottom: 0;
+}
+
+.text-content__content .rte br {
+  content: "";
+  display: block;
+  margin: 1rem 0;
+}
+
+.text-content__content .rte br + br {
+  margin-top: 2rem;
+}
+
+.text-content__content .rte {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.text-content__content .rte > * + * {
+  margin-top: 1.5rem;
+}
+
+.text-content__content .rte ul,
+.text-content__content .rte ol {
+  margin: 1.5rem 0;
+  padding-left: 2rem;
+}
+
+.text-content__content .rte li {
+  margin-bottom: 0.5rem;
+}
+
+.text-content__content .rte li:last-child {
+  margin-bottom: 0;
+}
+
+.text-content__content .rte {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.text-content__content .rte a {
+  color: rgb(var(--color-link));
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.text-content__content .rte a:hover {
+  text-decoration-thickness: 0.2rem;
+  color: rgb(var(--color-accent-1));
+}
+
+@media screen and (max-width: 749px) {
+  .text-content {
+    padding: 4rem 0;
+  }
+
+  .text-content__heading {
+    font-size: calc(var(--font-heading-scale) * 2.8rem);
+  }
+
+  .text-content__content .rte {
+    font-size: 1.5rem;
+  }
+
+  .text-content__wrapper::after {
+    width: 10rem;
+    height: 10rem;
+    top: -1rem;
+    right: -1rem;
+  }
+}
+
+/* Color scheme variations */
+.text-content--color-scheme-1 {
+  background-color: rgb(var(--color-background));
+  color: rgb(var(--color-foreground));
+}
+
+.text-content--color-scheme-2 {
+  background-color: rgb(var(--color-background-2));
+  color: rgb(var(--color-foreground-2));
+}
+
+.text-content--color-scheme-3 {
+  background-color: rgb(var(--color-background-3));
+  color: rgb(var(--color-foreground-3));
+}
+
+/* Accent color variations */
+.text-content__accent--color-1 {
+  color: rgb(var(--color-accent-1));
+  background: rgba(var(--color-accent-1), 0.1);
+}
+
+.text-content__accent--color-2 {
+  color: rgb(var(--color-accent-2));
+  background: rgba(var(--color-accent-2), 0.1);
+}
+
+.text-content__accent--color-3 {
+  color: rgb(var(--color-accent-3));
+  background: rgba(var(--color-accent-3), 0.1);
+} 

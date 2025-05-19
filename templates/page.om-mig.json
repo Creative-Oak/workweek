@@ -1,0 +1,74 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "text_content_4cyW3x": {
+      "type": "text-content",
+      "name": "Text Content",
+      "settings": {
+        "accent_text": "Det kræver mod at starte forfra – og du behøver ikke gøre det alene.",
+        "accent_color": "1",
+        "heading": "Hvorfor WorkWeek?",
+        "content": "<p>Mit navn er Ulla Kaspersen, og jeg har stiftet WorkWeek for at hjælpe kvinder med at finde tilbage til arbejdslivet på deres egne præmisser. Efter selv at have oplevet stress tæt på, ved jeg, hvor svært det kan være at rejse sig igen. Men jeg ved også, at det er muligt. Hos WorkWeek skaber jeg et trygt rum, hvor der er plads til både sårbarhed, håb og nye begyndelser.</p>",
+        "width": "narrow",
+        "color_scheme": "1",
+        "padding_top": 100,
+        "padding_bottom": 36
+      }
+    },
+    "custom_cta_VKk6x3": {
+      "type": "custom-cta",
+      "name": "Custom CTA",
+      "settings": {
+        "image": "shopify://shop_images/37536_A.jpg",
+        "accent_text": "Du er ikke alene. Der er en vej videre – og den begynder med dig.",
+        "heading": "Små skridt, stor forskel",
+        "text": "<p>Jeg har arbejdet med mennesker i mange år – både i det offentlige og det private. Med en baggrund inden for psykologi, kommunikation og coaching har jeg set, hvor meget det kræver at finde tilbage efter stress, udbrændthed eller depression. </p><p>Derfor brænder jeg for at støtte kvinder i netop den proces. Ikke med færdige svar – men med nærvær, faglighed og respekt for din rejse.</p><p>WorkWeek handler ikke om at presse dig tilbage på fuldt blus. Det handler om at finde en ny balance, hvor du kan være både dig selv og en del af arbejdslivet – uden at miste pusten. </p><p>Jeg tror på en nænsom, men målrettet tilgang, hvor vi sammen finder dine ressourcer, styrker og næste skridt. For du har dem – måske skal du bare have lidt hjælp til at finde dem igen.</p>",
+        "button_text": "",
+        "button_link": "",
+        "button_style_secondary": false,
+        "show_button_arrow": false,
+        "color_scheme": ""
+      }
+    },
+    "featured_blog_iCFW6M": {
+      "type": "featured-blog",
+      "name": "t:sections.featured-blog.presets.name",
+      "settings": {
+        "blog": "blog",
+        "post_limit": 3,
+        "heading": "Læs mere om hvad jeg laver",
+        "heading_size": "h1",
+        "columns_desktop": 3,
+        "show_view_all": true,
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "text_content_4cyW3x",
+    "custom_cta_VKk6x3",
+    "featured_blog_iCFW6M"
+  ]
+}

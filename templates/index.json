@@ -1,0 +1,163 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Er du klar til dit næste skridt?",
+            "heading_size": "h0"
+          }
+        },
+        "text_AGMnDB": {
+          "type": "text",
+          "settings": {
+            "text": "WorkWeek er skabt med omtanke for dig, der har oplevet, hvor svært det kan være at finde fodfæste igen. Vi møder dig med empati, erfaring og et stærkt ønske om at støtte dig videre – uden pres.",
+            "text_style": "subtitle"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Book Samtale",
+            "button_link_1": "shopify://collections/all",
+            "button_style_secondary_1": true,
+            "show_button_arrow_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "show_button_arrow_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text_AGMnDB",
+        "button"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/37536_A.jpg",
+        "image_overlay_opacity": 20,
+        "image_height": "large",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-left",
+        "desktop_content_alignment": "left",
+        "show_text_box": false,
+        "color_scheme": "scheme-3",
+        "stack_images_on_mobile": false,
+        "mobile_content_alignment": "center",
+        "show_text_below": false,
+        "mobile_min_height": 400,
+        "mobile_content_vertical_alignment": "center"
+      }
+    },
+    "text_content_JrFEHW": {
+      "type": "text-content",
+      "name": "Text Content",
+      "settings": {
+        "accent_text": "Støtte til dig, der vil videre – i dit tempo.",
+        "accent_color": "1",
+        "heading": "Velkommen til WorkWeek",
+        "content": "<p>os WorkWeek tror vi på, at alle kvinder fortjener et arbejdsliv med mening, balance og selvværd. Vi tilbyder personlig rådgivning og sparring, når du er klar til at tage næste skridt – uanset om du har været sygemeldt med stress, står midt i en svær livsomstilling, eller blot har brug for ny retning i karrieren.</p><h3>Din vej – din rytme</h3><p>Vi ved, at vejen tilbage til arbejdslivet ikke er ens for alle. Derfor skræddersyr vi forløb, der passer til netop dine behov og udfordringer. Hos os er der plads til pauser, plads til tvivl – og plads til at blomstre i dit eget tempo.</p><h3>Hvad vi tilbyder</h3><p>med fokus på trivsel og fremtid med andre kvinder i samme situation, når du er klar<br/></p><h3>Et trygt rum for forandring</h3><p>WorkWeek er skabt med omtanke for dig, der har oplevet, hvor svært det kan være at finde fodfæste igen. Vi møder dig med empati, erfaring og et stærkt ønske om at støtte dig videre – uden pres.</p>",
+        "width": "standard",
+        "color_scheme": "1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_cta_JnG7r9": {
+      "type": "custom-cta",
+      "name": "Custom CTA",
+      "settings": {
+        "image": "shopify://shop_images/37635_B.jpg",
+        "accent_text": "Et arbejdsliv i dit tempo",
+        "heading": "Når arbejdslivet gør ondt, er det ikke dig, der er forkert",
+        "text": "<p>WorkWeek er skabt til dig, der har brug for at finde ro, retning og styrke efter en svær periode. Uanset om du kommer fra stress, udbrændthed eller blot en følelse af at have mistet dig selv lidt undervejs – her er der plads til dig. </p><p></p><p>Vi tror ikke på hurtige løsninger, men på ægte forandring gennem omsorg, viden og fællesskab.</p>",
+        "button_text": "Om os",
+        "button_link": "shopify://pages/om-mig",
+        "button_style_secondary": false,
+        "show_button_arrow": true,
+        "color_scheme": "scheme-1"
+      }
+    },
+    "featured_course_pwCcKc": {
+      "type": "featured-course",
+      "blocks": {
+        "heading_zLWL6P": {
+          "type": "heading",
+          "settings": {
+            "heading": "Kom godt videre – Et kursus til dig, der vil tilbage i Balance",
+            "heading_size": "h2"
+          }
+        },
+        "text_T87f4p": {
+          "type": "text",
+          "settings": {
+            "text": "Et nænsomt og praksisnært kursus for mennesker, der ønsker at finde ro, retning og selvtillid i arbejdslivet igen efter stress, depression eller en svær periode. Vi arbejder med små skridt, realistiske mål og fokus på dig og dine behov."
+          }
+        },
+        "buttons_343qVf": {
+          "type": "buttons",
+          "settings": {
+            "button_text_1": "Tilmeld dig her",
+            "button_link_1": "shopify://products/kursus-1",
+            "button_style_secondary_1": false,
+            "show_button_arrow_1": true,
+            "button_text_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "show_button_arrow_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_zLWL6P",
+        "text_T87f4p",
+        "buttons_343qVf"
+      ],
+      "name": "Featured Course",
+      "settings": {
+        "product": "kursus-1",
+        "text_bg_color": "#95505b",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_scheme": "scheme-a941145f-9e8a-44e9-a898-c62799066b72"
+      }
+    },
+    "featured_blog_Jx8nAG": {
+      "type": "featured-blog",
+      "name": "t:sections.featured-blog.presets.name",
+      "settings": {
+        "blog": "blog",
+        "post_limit": 3,
+        "heading": "Blog",
+        "heading_size": "h1",
+        "columns_desktop": 3,
+        "show_view_all": true,
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "image_banner",
+    "text_content_JrFEHW",
+    "custom_cta_JnG7r9",
+    "featured_course_pwCcKc",
+    "featured_blog_Jx8nAG"
+  ]
+}
