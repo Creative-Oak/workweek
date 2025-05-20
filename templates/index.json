@@ -30,12 +30,12 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Book Samtale",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
+            "button_link_1": "shopify://pages/booking",
+            "button_style_secondary_1": false,
             "show_button_arrow_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false,
+            "button_label_2": "Få adgang til kursus",
+            "button_link_2": "shopify://products/kursus-1",
+            "button_style_secondary_2": true,
             "show_button_arrow_2": false
           }
         }
