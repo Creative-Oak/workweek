@@ -66,7 +66,7 @@
                     {% else %}
                       href="{{ block.settings.button_link_1 }}"
                     {% endif %}
-                    class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"
+                    class="button featured-course-button color-{{ section.settings.color_scheme }}{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}{% if block.settings.button_text_color_1 != 'foreground' %} button--text-{{ block.settings.button_text_color_1 }}{% endif %}"
                   >
                     {{- block.settings.button_text_1 -}}
                     {%- if block.settings.show_button_arrow_1 -%}
@@ -81,7 +81,7 @@
                     {% else %}
                       href="{{ block.settings.button_link_2 }}"
                     {% endif %}
-                    class="button{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}"
+                    class="button featured-course-button color-{{ section.settings.color_scheme }}{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}{% if block.settings.button_text_color_2 != 'foreground' %} button--text-{{ block.settings.button_text_color_2 }}{% endif %}"
                   >
                     {{- block.settings.button_text_2 -}}
                     {%- if block.settings.show_button_arrow_2 -%}
@@ -243,6 +243,26 @@
           "label": "Show arrow icon"
         },
         {
+          "type": "select",
+          "id": "button_text_color_1",
+          "options": [
+            {
+              "value": "foreground",
+              "label": "Foreground color"
+            },
+            {
+              "value": "background",
+              "label": "Background color"
+            },
+            {
+              "value": "secondary-background",
+              "label": "Secondary background color"
+            }
+          ],
+          "default": "foreground",
+          "label": "Button text color"
+        },
+        {
           "type": "header",
           "content": "Second Button"
         },
@@ -268,6 +288,26 @@
           "id": "show_button_arrow_2",
           "default": false,
           "label": "Show arrow icon"
+        },
+        {
+          "type": "select",
+          "id": "button_text_color_2",
+          "options": [
+            {
+              "value": "foreground",
+              "label": "Foreground color"
+            },
+            {
+              "value": "background",
+              "label": "Background color"
+            },
+            {
+              "value": "secondary-background",
+              "label": "Secondary background color"
+            }
+          ],
+          "default": "foreground",
+          "label": "Button text color"
         }
       ]
     }

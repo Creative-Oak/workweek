@@ -57,7 +57,7 @@
           {% else %}
             href="{{ button_link }}"
           {% endif %}
-          class="button{% if section.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+          class="button custom-cta-button color-{{ section.settings.color_scheme }}{% if section.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}{% if section.settings.button_text_color != 'foreground' %} button--text-{{ section.settings.button_text_color }}{% endif %}"
         >
           {{- button_text -}}
           {%- if section.settings.show_button_arrow -%}
@@ -120,6 +120,26 @@
       "id": "show_button_arrow",
       "default": false,
       "label": "Show arrow icon on button"
+    },
+    {
+      "type": "select",
+      "id": "button_text_color",
+      "options": [
+        {
+          "value": "foreground",
+          "label": "Foreground color"
+        },
+        {
+          "value": "background",
+          "label": "Background color"
+        },
+        {
+          "value": "secondary-background",
+          "label": "Secondary background color"
+        }
+      ],
+      "default": "foreground",
+      "label": "Button text color"
     },
     {
       "type": "color_scheme",

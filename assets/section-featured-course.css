@@ -89,6 +89,19 @@
   --alpha-button-background: 0;
 }
 
+/* Remove explicit button color to allow proper inheritance */
+.featured-course-button {
+  color: rgb(var(--color-foreground));
+}
+
+.featured-course-text .button--text-background {
+  color: rgb(var(--color-background)) !important;
+}
+
+.featured-course-text .button--text-secondary-background {
+  color: rgb(var(--color-secondary-background)) !important;
+}
+
 @media (max-width: 900px) {
   .featured-course {
     padding-top: 2rem;

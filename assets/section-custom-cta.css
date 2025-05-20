@@ -75,7 +75,19 @@
 
 .custom-cta__content .button {
   margin: 0 auto;
-  color: rgb(var(--color-background));
+}
+
+.custom-cta__content .button--text-background {
+  color: rgb(var(--color-background)) !important;
+}
+
+.custom-cta__content .button--text-secondary-background {
+  color: rgb(var(--color-secondary-background)) !important;
+}
+
+.custom-cta-button {
+  /* Allow button to inherit color scheme */
+  color: rgb(var(--color-foreground));
 }
 
 @media screen and (max-width: 989px) {
