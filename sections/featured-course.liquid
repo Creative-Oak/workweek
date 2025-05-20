@@ -20,23 +20,23 @@
 </style>
 
 <section class="featured-course-{{ section.id }} featured-course color-{{ section.settings.color_scheme }}">
-  <div class="featured-course-inner">
-    <div class="featured-course-image">
-      {%- if product != blank and product.featured_image != blank -%}
-        <img
-          src="{{ product.featured_image | image_url: width: 600 }}"
-          alt="{{ product.title | escape }}"
-          width="600"
-          height="600"
-        >
-      {%- else -%}
-        <div style="width:320px;height:320px;background:#eee;display:flex;align-items:center;justify-content:center;border-radius:8px;">
-          No image
-        </div>
-      {%- endif -%}
-    </div>
-    <div class="featured-course-text">
-      <div class="featured-course-text-inner">
+  <div class="featured-course-bg">&nbsp;</div>
+  <div class="featured-course-container page-width">
+    <div class="featured-course-content">
+      <div class="featured-course-image">
+        {%- if product != blank and product.featured_image != blank -%}
+          <img
+            src="{{ product.featured_image | image_url: width: 600 }}"
+            alt="{{ product.title | escape }}"
+            width="600"
+            height="900"
+            loading="lazy"
+          >
+        {%- else -%}
+          <div class="featured-course-placeholder">No image</div>
+        {%- endif -%}
+      </div>
+      <div class="featured-course-text">
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {%- when 'heading' -%}
