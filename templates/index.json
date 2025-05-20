@@ -50,7 +50,7 @@
         "image_overlay_opacity": 20,
         "image_height": "large",
         "image_behavior": "none",
-        "desktop_content_position": "middle-left",
+        "desktop_content_position": "bottom-left",
         "desktop_content_alignment": "left",
         "show_text_box": false,
         "color_scheme": "scheme-3",
@@ -59,51 +59,6 @@
         "show_text_below": false,
         "mobile_min_height": 400,
         "mobile_content_vertical_alignment": "center"
-      }
-    },
-    "featured_course_pwCcKc": {
-      "type": "featured-course",
-      "blocks": {
-        "heading_zLWL6P": {
-          "type": "heading",
-          "settings": {
-            "heading": "Kom godt videre – Et kursus til dig, der vil tilbage i Balance",
-            "heading_size": "h2"
-          }
-        },
-        "text_T87f4p": {
-          "type": "text",
-          "settings": {
-            "text": "Et nænsomt og praksisnært kursus for mennesker, der ønsker at finde ro, retning og selvtillid i arbejdslivet igen efter stress, depression eller en svær periode. Vi arbejder med små skridt, realistiske mål og fokus på dig og dine behov."
-          }
-        },
-        "buttons_343qVf": {
-          "type": "buttons",
-          "settings": {
-            "button_text_1": "Tilmeld dig her",
-            "button_link_1": "shopify://products/kursus-1",
-            "button_style_secondary_1": false,
-            "show_button_arrow_1": true,
-            "button_text_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false,
-            "show_button_arrow_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_zLWL6P",
-        "text_T87f4p",
-        "buttons_343qVf"
-      ],
-      "name": "Featured Course",
-      "settings": {
-        "product": "kursus-1",
-        "margin_top": 36,
-        "margin_bottom": 36,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "color_scheme": "scheme-a941145f-9e8a-44e9-a898-c62799066b72"
       }
     },
     "text_content_JrFEHW": {
@@ -178,7 +133,54 @@
       ],
       "name": "Testimonials",
       "settings": {
-        "color_scheme": ""
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "featured_course_pwCcKc": {
+      "type": "featured-course",
+      "blocks": {
+        "heading_zLWL6P": {
+          "type": "heading",
+          "settings": {
+            "heading": "Kom godt videre – Et kursus til dig, der vil tilbage i Balance",
+            "heading_size": "h2"
+          }
+        },
+        "text_T87f4p": {
+          "type": "text",
+          "settings": {
+            "text": "Et nænsomt og praksisnært kursus for mennesker, der ønsker at finde ro, retning og selvtillid i arbejdslivet igen efter stress, depression eller en svær periode. Vi arbejder med små skridt, realistiske mål og fokus på dig og dine behov."
+          }
+        },
+        "buttons_343qVf": {
+          "type": "buttons",
+          "settings": {
+            "button_text_1": "Tilmeld dig her",
+            "button_link_1": "shopify://products/kursus-1",
+            "button_style_secondary_1": false,
+            "show_button_arrow_1": true,
+            "button_text_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "show_button_arrow_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_zLWL6P",
+        "text_T87f4p",
+        "buttons_343qVf"
+      ],
+      "name": "Featured Course",
+      "settings": {
+        "product": "kursus-1",
+        "margin_top": 36,
+        "margin_bottom": 36,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_scheme": "scheme-a941145f-9e8a-44e9-a898-c62799066b72"
       }
     },
     "featured_blog_Jx8nAG": {
@@ -202,10 +204,10 @@
   },
   "order": [
     "image_banner",
-    "featured_course_pwCcKc",
-    "testimonials_WU7HDq",
     "text_content_JrFEHW",
     "custom_cta_JnG7r9",
+    "testimonials_WU7HDq",
+    "featured_course_pwCcKc",
     "featured_blog_Jx8nAG"
   ]
 }
