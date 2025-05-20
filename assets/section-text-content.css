@@ -55,14 +55,12 @@
 }
 
 .text-content__accent {
-  font-size: 1.25rem;
+  font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-
   display: inline-block;
   font-weight: 500;
   position: relative;
-  font-weight: 300;
   border-radius: 2rem;
 }
 
@@ -160,9 +158,6 @@
 }
 
 @media screen and (max-width: 749px) {
-  .text-content {
-    padding: 4rem 0;
-  }
 
   .text-content__heading {
     font-size: calc(var(--font-heading-scale) * 2.8rem);

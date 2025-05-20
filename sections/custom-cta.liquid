@@ -23,8 +23,8 @@
 
 {{ 'section-custom-cta.css' | asset_url | stylesheet_tag }}
 
-<section class="custom-cta section-{{ section.id }}-padding page-width color-{{ section.settings.color_scheme }}">
-  <div class="custom-cta__inner">
+<section class="custom-cta color-{{ section.settings.color_scheme }}">
+  <div class="custom-cta__inner section-{{ section.id }}-padding page-width">
     <div class="custom-cta__image">
       {%- if image != blank -%}
         <img
