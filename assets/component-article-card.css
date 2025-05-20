@@ -48,16 +48,18 @@
 
 .article-card .card__heading {
   margin-bottom: 0.6rem;
+  font-size: 2.5rem;
 }
 
 .blog-articles .article-card .card__information,
 .blog__posts .article-card .card__information {
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .article-card__info {
   padding-top: 0.4rem;
+  font-family: 'Inter', sans-serif;
 }
 
 .article-card__footer {

@@ -1,0 +1,73 @@
+{{ 'section-testimonials.css' | asset_url | stylesheet_tag }}
+
+<section class="testimonials-section page-width color-{{ section.settings.color_scheme }}">
+  <div class="testimonials-wrapper">
+    {%- for block in section.blocks -%}
+      <div class="testimonial-card" {{ block.shopify_attributes }}>
+        {% if block.settings.image != blank %}
+          <div class="testimonial-image">
+            <img src="{{ block.settings.image | image_url: width: 120 }}" alt="{{ block.settings.name | escape }}" loading="lazy" width="60" height="60">
+          </div>
+        {% endif %}
+        <div class="testimonial-content">
+          <div class="testimonial-text">{{ block.settings.testimonial }}</div>
+          <div class="testimonial-author">
+            <span class="testimonial-name">{{ block.settings.name }}</span>
+            {% if block.settings.title != blank %}
+              <span class="testimonial-title">- {{ block.settings.title }}</span>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    {%- endfor -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Testimonials",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "background-1"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Author image"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Author name"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Author title"
+        },
+        {
+          "type": "richtext",
+          "id": "testimonial",
+          "label": "Testimonial"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonials"
+    }
+  ]
+}
+{% endschema %} 
