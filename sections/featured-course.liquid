@@ -4,20 +4,27 @@
 {%- endcomment -%}
 {%- liquid
   assign product = section.settings.product
-  assign padding_top = section.settings.padding_top | default: 36
-  assign padding_bottom = section.settings.padding_bottom | default: 36
-  assign text_bg_color = section.settings.text_bg_color | default: '#d2b195'
 -%}
 
-{{ 'section-featured-course.css' | asset_url | stylesheet_tag }}
-
-<style>
+{%- style -%}
   .featured-course-{{ section.id }} {
-    --padding-top: {{ padding_top }}px;
-    --padding-bottom: {{ padding_bottom }}px;
-    --text-bg-color: {{ text_bg_color }};
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
+    margin-bottom: {{ section.settings.margin_bottom | times: 0.75 | round: 0 }}px;
   }
-</style>
+
+  @media screen and (min-width: 750px) {
+    .featured-course-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+      margin-top: {{ section.settings.margin_top }}px;
+      margin-bottom: {{ section.settings.margin_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+{{ 'section-featured-course.css' | asset_url | stylesheet_tag }}
 
 <section class="featured-course-{{ section.id }} featured-course color-{{ section.settings.color_scheme }}">
   <div class="featured-course-bg">&nbsp;</div>
@@ -102,10 +109,24 @@
       "label": "Course Product"
     },
     {
-      "type": "color",
-      "id": "text_bg_color",
-      "label": "Text Background Color",
-      "default": "#d2b195"
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin Top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin Bottom",
+      "default": 36
     },
     {
       "type": "range",

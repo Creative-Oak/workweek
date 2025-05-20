@@ -1,6 +1,4 @@
 .featured-course {
-  padding-top: var(--padding-top);
-  padding-bottom: var(--padding-bottom);
   position: relative;
   overflow: visible;
   color: rgb(var(--color-foreground));
@@ -11,8 +9,7 @@
   margin: 0 auto;
   position: relative;
   z-index: 2;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+
 }
 
 .featured-course-content {
@@ -24,11 +21,10 @@
 
 .featured-course-bg {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 0;
   right: 0;
   width: calc(50% + 30rem);
-  height: calc(100% - 6rem);
+  height: 100%;
   background-color: rgb(var(--color-background));
   z-index: 1;
   display: block;
@@ -111,9 +107,9 @@
 
   .featured-course-bg {
     width: 100%;
-    height: calc(100% - 10rem);
-    top: auto;
-    bottom: 0;
+    height: 100%;
+    top: 0;
+    bottom: auto;
     transform: none;
   }
 
