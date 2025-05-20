@@ -21,7 +21,7 @@
       "type": "text-content",
       "name": "Text Content",
       "settings": {
-        "accent_text": "Nogle gange har man bare brug for at tale med et menneske, der forstår.",
+        "accent_text": "",
         "accent_color": "1",
         "heading": "Book en tid",
         "content": "<p><strong>Har du brug for en samtale – eller bare en, der lytter?</strong><br/><br/>Du kan nu booke en individuel samtale, hvor vi sammen kigger på, hvor du står, og hvad du har brug for. Måske føler du dig fastlåst i forhold til arbejdslivet, måske har du brug for sparring omkring stress, trivsel eller næste skridt.</p><p>Samtalen foregår online, og du bestemmer, hvad vi skal bruge tiden på.</p><h3>Hvad kan vi tale om?</h3><p>Der er ingen forberedelse nødvendig – du møder bare op, som du er.</p><h3>Pris og varighed</h3><p><strong>Samtalen varer 50 minutter og koster 495 kr.</strong><br/><br/>Efter samtalen får du eventuelt materiale eller forslag til næste skridt, hvis du ønsker det.</p>",
@@ -36,7 +36,7 @@
       "name": "Custom CTA",
       "settings": {
         "image": "shopify://shop_images/37635_A.jpg",
-        "accent_text": "",
+        "accent_text": "Nogle gange har man bare brug for at tale med et menneske, der forstår.",
         "heading": "Sådan booker du",
         "text": "<p>Tryk på knappen herunder for at vælge en tid i kalenderen. </p><p></p><p>Du modtager en bekræftelse og link til online mødet, når din booking er gennemført.</p><p></p>",
         "button_text": "Book en tid",
