@@ -1,11 +1,7 @@
-.custom-cta {
-  padding: 4rem 0;
-}
 
 .custom-cta__inner {
   max-width: var(--page-width);
   margin: 0 auto;
-  padding: 0 1.5rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
 
