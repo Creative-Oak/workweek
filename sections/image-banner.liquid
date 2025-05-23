@@ -35,6 +35,10 @@
       flex-direction: column;
     }
 
+    #Banner-{{ section.id }}::after {
+      opacity: {{ section.settings.mobile_image_overlay_opacity | default: section.settings.image_overlay_opacity | divided_by: 100.0 }};
+    }
+
     #Banner-{{ section.id }} .banner__content {
       display: flex;
       flex-direction: column;
@@ -234,6 +238,16 @@
       "default": 0
     },
     {
+      "type": "range",
+      "id": "mobile_image_overlay_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "unit": "%",
+      "label": "Mobile overlay opacity",
+      "default": 0
+    },
+    {
       "type": "select",
       "id": "image_height",
       "options": [
@@ -396,16 +410,6 @@
       "id": "show_text_below",
       "default": true,
       "label": "t:sections.image-banner.settings.show_text_below.label"
-    },
-    {
-      "type": "range",
-      "id": "mobile_min_height",
-      "min": 300,
-      "max": 800,
-      "step": 50,
-      "unit": "px",
-      "label": "Minimum height on mobile",
-      "default": 400
     },
     {
       "type": "select",
