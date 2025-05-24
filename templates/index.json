@@ -162,7 +162,7 @@
             "button_link_1": "shopify://products/kursus-1",
             "button_style_secondary_1": false,
             "show_button_arrow_1": true,
-            "button_text_color_1": "foreground",
+            "button_text_color_1": "background",
             "button_text_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false,
@@ -183,7 +183,7 @@
         "margin_bottom": 36,
         "padding_top": 36,
         "padding_bottom": 36,
-        "color_scheme": "scheme-a941145f-9e8a-44e9-a898-c62799066b72"
+        "color_scheme": "scheme-4"
       }
     },
     "featured_blog_Jx8nAG": {
