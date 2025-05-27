@@ -43,6 +43,7 @@
         "button_link": "#",
         "button_style_secondary": false,
         "show_button_arrow": true,
+        "button_text_color": "background",
         "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
