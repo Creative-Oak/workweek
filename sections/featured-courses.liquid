@@ -26,8 +26,9 @@
   endif
 -%}
 
+
 <div class="courses color-{{ section.settings.color_scheme }} gradient{% if section.settings.heading == blank %} no-heading{% endif %}">
-  
+
   <div class="page-width-desktop isolate{% if courses_displayed < 3 %} page-width-tablet{% endif %} section-{{ section.id }}-padding">
     {%- unless section.settings.heading == blank -%}
       <div class="title-wrapper-with-link{% if courses_displayed > 2 %} title-wrapper--self-padded-tablet-down{% else %} title-wrapper--self-padded-mobile{% endif %} title-wrapper--no-top-margin">
@@ -60,8 +61,9 @@
       >
    
         {%- if courses_displayed > 0 -%}
-      
+   
           {%- for course in courses limit: section.settings.course_limit -%}
+         
             <li
               id="Slide-{{ section.id }}-{{ forloop.index }}"
               class="courses__item grid__item course slider__slide slider__slide--full-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"

@@ -1,29 +1,12 @@
-{% comment %}
-  Renders a course card for a given course metaobject with settings to either show the image or not.
-
-  Accepts:
-  - course: {Object} Course metaobject
-  - show_image: {String} The setting either show the course image or not. If it's not included it will show the image by default
-  - show_excerpt: {String} The setting either show the course excerpt or not. If it's not included it will show the excerpt by default
-  - lazy_load: {Boolean} Image should be lazy loaded. Default: true (optional)
-  - color_scheme: {String} Color scheme for the card (optional)
-
-  Usage:
-  {% render 'course-card' course: course, show_image: section.settings.show_image, color_scheme: section.settings.color_scheme %}
-{% endcomment %}
 
 {%- if course and course != empty -%}
   {%- liquid
     assign course_title = course.title
     assign course_description = course.small_description
+
     
-    # Create URL - use handle if available, otherwise use id
-    if course.handle and course.handle != blank
-      assign course_url = '/pages/course-' | append: course.handle
-    else
-      assign course_url = '/pages/course-' | append: course.id
-    endif
-    
+    assign slug = course.title | handleize 
+    assign course_url = '/pages/forlob/' | append: slug
     # Set default values
     if show_image == blank
       assign show_image = true
@@ -42,6 +25,8 @@
   -%}
 
   <div class="{{ color_scheme_class }} gradient">
+
+  
     <article class="course-card">
       {%- if show_image and course.primary_image.value -%}
         <div class="course-card__image-wrapper">
