@@ -47,7 +47,7 @@
       ],
       "settings": {
         "image": "shopify://shop_images/37536_A.jpg",
-        "image_overlay_opacity": 50,
+        "image_overlay_opacity": 20,
         "mobile_image_overlay_opacity": 30,
         "image_height": "large",
         "image_behavior": "none",
@@ -71,6 +71,22 @@
         "content": "<p>os WorkWeek tror vi på, at alle kvinder fortjener et arbejdsliv med mening, balance og selvværd. Vi tilbyder personlig rådgivning og sparring, når du er klar til at tage næste skridt – uanset om du har været sygemeldt med stress, står midt i en svær livsomstilling, eller blot har brug for ny retning i karrieren.</p><h3>Din vej – din rytme</h3><p>Vi ved, at vejen tilbage til arbejdslivet ikke er ens for alle. Derfor skræddersyr vi forløb, der passer til netop dine behov og udfordringer. Hos os er der plads til pauser, plads til tvivl – og plads til at blomstre i dit eget tempo.</p><h3>Hvad vi tilbyder</h3><p>med fokus på trivsel og fremtid med andre kvinder i samme situation, når du er klar<br/></p><h3>Et trygt rum for forandring</h3><p>WorkWeek er skabt med omtanke for dig, der har oplevet, hvor svært det kan være at finde fodfæste igen. Vi møder dig med empati, erfaring og et stærkt ønske om at støtte dig videre – uden pres.</p>",
         "width": "standard",
         "color_scheme": "1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_courses_eYfUq6": {
+      "type": "featured-courses",
+      "name": "Featured Courses",
+      "settings": {
+        "heading": "Mine foløb",
+        "heading_size": "h1",
+        "show_image": true,
+        "course_limit": 3,
+        "columns_desktop": 3,
+        "show_view_all": true,
+        "view_all_url": "",
+        "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -237,6 +253,7 @@
   "order": [
     "image_banner",
     "text_content_JrFEHW",
+    "featured_courses_eYfUq6",
     "custom_cta_JnG7r9",
     "featured_collection_8GWLyA",
     "testimonials_WU7HDq",
