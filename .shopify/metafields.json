@@ -10,17 +10,108 @@
   "order": [],
   "page": [
     {
-      "key": "date",
+      "key": "extra_text_field_1",
       "namespace": "custom",
-      "name": "date",
-      "description": "",
+      "name": "Extra Text Field 1",
+      "description": "This will be shown after the \"LOVER  Logo",
       "type": {
-        "name": "date",
-        "category": "DATE_TIME"
+        "name": "rich_text_field",
+        "category": "TEXT"
       }
     }
   ],
-  "product": [],
+  "product": [
+    {
+      "key": "headline",
+      "namespace": "custom",
+      "name": "Headline",
+      "description": "This headline will display beneath the name of the product",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "hover_text",
+      "namespace": "custom",
+      "name": "Hover text",
+      "description": "This text will display when hovering a product on a collection page.",
+      "type": {
+        "name": "rich_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "more_info",
+      "namespace": "custom",
+      "name": "More info",
+      "description": "",
+      "type": {
+        "name": "rich_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "color-pattern",
+      "namespace": "shopify",
+      "name": "Color",
+      "description": "Defines the primary color or pattern, such as blue or striped",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "sleeve-length-type",
+      "namespace": "shopify",
+      "name": "Sleeve length type",
+      "description": "Specifies the style of sleeves on clothing items, such as short or sleeveless",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "neckline",
+      "namespace": "shopify",
+      "name": "Neckline",
+      "description": "Used to describe the neck shape of a garment, such as V-neck or boat",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "fabric",
+      "namespace": "shopify",
+      "name": "Fabric",
+      "description": "Identifies the type of fabric used in a product, for example, cotton or denim",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "size",
+      "namespace": "shopify",
+      "name": "Size",
+      "description": "Used to specify the size of a product, such as 0-3 months or Extra large (XL)",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "top_right",
+      "namespace": "custom",
+      "name": "Top Right",
+      "description": "Text where it says \"44cl\" on water",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    }
+  ],
   "variant": [],
   "shop": []
 }
