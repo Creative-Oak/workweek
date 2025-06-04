@@ -29,11 +29,11 @@
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Book Samtale",
+            "button_label_1": "Book samtale",
             "button_link_1": "shopify://pages/booking",
             "button_style_secondary_1": false,
             "show_button_arrow_1": true,
-            "button_label_2": "Få adgang til kursus",
+            "button_label_2": "Få adgang til forløb",
             "button_link_2": "shopify://products/kursus-1",
             "button_style_secondary_2": true,
             "show_button_arrow_2": false
