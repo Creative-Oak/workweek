@@ -1,0 +1,84 @@
+{% comment %}
+  Renders a course card for a given course metaobject with settings to either show the image or not.
+
+  Accepts:
+  - course: {Object} Course metaobject
+  - show_image: {String} The setting either show the course image or not. If it's not included it will show the image by default
+  - show_excerpt: {String} The setting either show the course excerpt or not. If it's not included it will show the excerpt by default
+  - lazy_load: {Boolean} Image should be lazy loaded. Default: true (optional)
+  - color_scheme: {String} Color scheme for the card (optional)
+
+  Usage:
+  {% render 'course-card' course: course, show_image: section.settings.show_image, color_scheme: section.settings.color_scheme %}
+{% endcomment %}
+
+{%- if course and course != empty -%}
+  {%- liquid
+    assign course_title = course.title
+    assign course_description = course.small_description
+    
+    # Create URL - use handle if available, otherwise use id
+    if course.handle and course.handle != blank
+      assign course_url = '/pages/course-' | append: course.handle
+    else
+      assign course_url = '/pages/course-' | append: course.id
+    endif
+    
+    # Set default values
+    if show_image == blank
+      assign show_image = true
+    endif
+    
+    if show_excerpt == blank
+      assign show_excerpt = true
+    endif
+    
+    # Set color scheme class
+    if color_scheme != blank
+      assign color_scheme_class = 'color-' | append: color_scheme
+    else
+      assign color_scheme_class = 'color-background-1'
+    endif
+  -%}
+
+  <div class="{{ color_scheme_class }} gradient">
+    <article class="course-card">
+      {%- if show_image and course.primary_image.value -%}
+        <div class="course-card__image-wrapper">
+          <img 
+            src="{{ course.primary_image.value | image_url: width: 400 }}" 
+            alt="{{ course_title | escape }}"
+            width="400" 
+            height="300"
+            {%- if lazy_load == false -%}
+              loading="eager"
+            {%- else -%}
+              loading="lazy"
+            {%- endif -%}
+          >
+        </div>
+      {%- endif -%}
+      
+      <div class="course-card__content">
+        <h3 class="course-card__title">
+          <a href="{{ course_url }}">
+            {{ course_title | escape }}
+          </a>
+        </h3>
+        
+        {%- if show_excerpt and course_description -%}
+          <p class="course-card__excerpt">
+            {{ course_description | strip_html | truncatewords: 25 }}
+          </p>
+        {%- endif -%}
+        
+        <a href="{{ course_url }}" style="max-width: fit-content; white-space: nowrap;" class="course-card__button button ">
+          Læs mere
+          <span class="button-arrow">{% render 'icon-button-arrow' %}</span>
+        </a>
+      </div>
+    </article>
+  </div>
+{%- endif -%}
+
+{{ 'component-course-card.css' | asset_url | stylesheet_tag }} 

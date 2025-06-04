@@ -1,0 +1,193 @@
+{{ 'section-course-content.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+{%- liquid
+  assign course_handle = page.handle | replace: 'course-', ''
+  assign course = nil
+  
+  for metaobject in shop.metaobjects["forlob"].values
+    if metaobject.handle == course_handle
+      assign course = metaobject
+      break
+    endif
+  endfor
+  
+  # Check if course_image is a URL string (for URL field type)
+  assign course_image = nil
+  assign is_url_field = false
+  if course and course.primary_image.value
+    assign course_image = course.primary_image.value
+    if course_image and course_image.size > 0 and course_image contains 'http'
+      assign is_url_field = true
+    endif
+  endif
+-%}
+
+<div class="course-content color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width section-{{ section.id }}-padding">
+    {%- if course -%}
+      <div class="course-content__wrapper">
+        {%- if course_image and section.settings.show_image -%}
+          <div class="course-content__image-wrapper">
+            <div class="course-content__image media media--landscape">
+              {%- if is_url_field -%}
+                <img
+                  src="{{ course_image }}"
+                  alt="{{ course.title | escape }}"
+                  loading="lazy"
+                >
+              {%- else -%}
+                <img
+                  srcset="
+                    {%- if course_image.width >= 400 -%}{{ course_image | image_url: width: 400 }} 400w,{%- endif -%}
+                    {%- if course_image.width >= 600 -%}{{ course_image | image_url: width: 600 }} 600w,{%- endif -%}
+                    {%- if course_image.width >= 800 -%}{{ course_image | image_url: width: 800 }} 800w,{%- endif -%}
+                    {%- if course_image.width >= 1000 -%}{{ course_image | image_url: width: 1000 }} 1000w,{%- endif -%}
+                    {%- if course_image.width >= 1200 -%}{{ course_image | image_url: width: 1200 }} 1200w,{%- endif -%}
+                    {{ course_image | image_url }} {{ course_image.width }}w
+                  "
+                  src="{{ course_image | image_url: width: 800 }}"
+                  sizes="(min-width: 990px) 800px, calc(100vw - 40px)"
+                  alt="{{ course_image.alt | escape }}"
+                  width="{{ course_image.width }}"
+                  height="{{ course_image.height }}"
+                  loading="lazy"
+                >
+              {%- endif -%}
+            </div>
+          </div>
+        {%- endif -%}
+        
+        <div class="course-content__text">
+          <h1 class="course-content__title {{ section.settings.heading_size }}">
+            {{ course.title | escape }}
+          </h1>
+          
+          {%- if course.description -%}
+            <div class="course-content__description rte">
+              {{ course.description }}
+            </div>
+          {%- endif -%}
+          
+          {%- if section.settings.show_back_button -%}
+            <div class="course-content__back">
+              <a href="{{ section.settings.back_url | default: '/pages/courses' }}" class="button button--secondary">
+                ← Tilbage til kurser
+              </a>
+            </div>
+          {%- endif -%}
+        </div>
+      </div>
+    {%- else -%}
+      <div class="course-content__not-found">
+        <h1 class="course-content__title h1">
+          Kursus ikke fundet
+        </h1>
+        <p>
+          Det kursus du leder efter kunne ikke findes.
+        </p>
+        <a href="{{ section.settings.back_url | default: '/pages/courses' }}" class="button">
+          Tilbage til kurser
+        </a>
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Course Content",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_image",
+      "default": true,
+      "label": "Show course image"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "Small"
+        },
+        {
+          "value": "h1",
+          "label": "Medium"
+        },
+        {
+          "value": "h0",
+          "label": "Large"
+        },
+        {
+          "value": "hxl",
+          "label": "Extra large"
+        },
+        {
+          "value": "hxxl",
+          "label": "XX Large"
+        }
+      ],
+      "default": "h1",
+      "label": "Heading size"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_back_button",
+      "default": true,
+      "label": "Show back to courses button"
+    },
+    {
+      "type": "url",
+      "id": "back_url",
+      "label": "Back button URL",
+      "info": "Default: /pages/courses"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 36
+    }
+  ]
+} 
+{% endschema %}
