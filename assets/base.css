@@ -1214,7 +1214,7 @@ button.shopify-payment-button__button--unbranded {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   min-width: auto !important;
   min-height: auto !important;
   padding: .5rem 4rem;
@@ -3624,7 +3624,7 @@ details-disclosure > details {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   min-width: auto !important;
   min-height: auto !important;
   padding: .75rem 4rem;
