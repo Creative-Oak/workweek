@@ -8,7 +8,8 @@
   --focused-base-box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 .icon-linkedin{
-  color: black;
+  width:1.75rem;
+  height: 1.75rem;
 }
 .product-card-wrapper .card,
 .contains-card--product {
