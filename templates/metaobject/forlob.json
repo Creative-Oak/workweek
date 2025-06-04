@@ -1,0 +1,71 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner_qWrVWp": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_wiTCzK": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ metaobject.title.value }}",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_wiTCzK"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "{{ metaobject.primary_image.value }}",
+        "image_overlay_opacity": 0,
+        "mobile_image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true,
+        "mobile_content_vertical_alignment": "center"
+      }
+    },
+    "rich_text_4Arbba": {
+      "type": "rich-text",
+      "blocks": {
+        "text_dMeka9": {
+          "type": "text",
+          "settings": {
+            "text": "<p></p>{{ metaobject.content | metafield_tag }}"
+          }
+        }
+      },
+      "block_order": [
+        "text_dMeka9"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "image_banner_qWrVWp",
+    "rich_text_4Arbba"
+  ]
+}
