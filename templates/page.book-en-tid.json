@@ -17,6 +17,51 @@
         "padding_bottom": 28
       }
     },
+    "rich_text_FeRkw4": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_RDqq4Y": {
+          "type": "heading",
+          "settings": {
+            "heading": "Fortæl om dit brand",
+            "heading_size": "h1"
+          }
+        },
+        "text_DXViDt": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Del oplysninger om dit brand med dine kunder. Beskriv et produkt, del meddelelser, eller byd velkommen til din butik.</p>"
+          }
+        },
+        "button_xMRaAW": {
+          "type": "button",
+          "settings": {
+            "button_label": "Knaptekst",
+            "button_link": "",
+            "button_style_secondary": false,
+            "show_button_arrow": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "show_button_arrow_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_RDqq4Y",
+        "text_DXViDt",
+        "button_xMRaAW"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "text_content_Cbrdm8": {
       "type": "text-content",
       "name": "Text Content",
@@ -48,11 +93,23 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "custom_liquid_GRYWiA": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!-- Calendly link widget begin -->\n<link href=\"https://assets.calendly.com/assets/external/widget.css\" rel=\"stylesheet\">\n<script src=\"https://assets.calendly.com/assets/external/widget.js\" type=\"text/javascript\" async></script>\n<a href=\"\" onclick=\"Calendly.initPopupWidget({url: 'https://calendly.com/magnus-creativeoak/30min'});return false;\">Schedule time with me</a>\n<!-- Calendly link widget end -->",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "main",
+    "rich_text_FeRkw4",
     "text_content_Cbrdm8",
-    "custom_cta_WwiMdP"
+    "custom_cta_WwiMdP",
+    "custom_liquid_GRYWiA"
   ]
 }
