@@ -1,0 +1,184 @@
+{%- liquid
+  assign accent_text = section.settings.accent_text
+  assign heading = section.settings.heading
+  assign text = section.settings.text
+  assign button_text = section.settings.button_text
+  assign calendly_url = section.settings.calendly_url
+  assign image = section.settings.image
+-%}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+{{ 'section-custom-cta.css' | asset_url | stylesheet_tag }}
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+<section class="custom-cta color-{{ section.settings.color_scheme }}">
+  <div class="custom-cta__inner section-{{ section.id }}-padding page-width">
+    <div class="custom-cta__image">
+      {%- if image != blank -%}
+        <img
+          src="{{ image | image_url: width: 800 }}"
+          alt="{{ image.alt | escape }}"
+          width="800"
+          height="600"
+          loading="lazy"
+        >
+      {%- else -%}
+        <div class="custom-cta__image-placeholder">
+          {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+        </div>
+      {%- endif -%}
+    </div>
+    <div class="custom-cta__content">
+      {%- if accent_text != blank -%}
+        <div class="custom-cta__accent">{{ accent_text }}</div>
+      {%- endif -%}
+      {%- if heading != blank -%}
+        <h2 class="custom-cta__heading">{{ heading }}</h2>
+      {%- endif -%}
+      {%- if text != blank -%}
+        <div class="custom-cta__text rte">{{ text }}</div>
+      {%- endif -%}
+      {%- if button_text != blank -%}
+        <a
+          href=""
+          onclick="Calendly.initPopupWidget({url: '{{ calendly_url }}'});return false;"
+          class="button custom-cta-button color-{{ section.settings.color_scheme }}{% if section.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}{% if section.settings.button_text_color != 'foreground' %} button--text-{{ section.settings.button_text_color }}{% endif %}"
+        >
+          {{- button_text -}}
+          {%- if section.settings.show_button_arrow -%}
+            <span class="button-arrow">{% render 'icon-button-arrow' %}</span>
+          {%- endif -%}
+        </a>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Calendly CTA",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "accent_text",
+      "label": "Accent Text",
+      "default": "Accent Text"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Share information about your brand or promotion here.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Schedule a Call"
+    },
+    {
+      "type": "text",
+      "id": "calendly_url",
+      "label": "Calendly URL",
+      "default": "https://calendly.com/magnus-creativeoak/30min"
+    },
+    {
+      "type": "checkbox",
+      "id": "button_style_secondary",
+      "label": "Use Secondary Button Style",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_button_arrow",
+      "default": false,
+      "label": "Show arrow icon on button"
+    },
+    {
+      "type": "select",
+      "id": "button_text_color",
+      "options": [
+        {
+          "value": "foreground",
+          "label": "Foreground color"
+        },
+        {
+          "value": "background",
+          "label": "Background color"
+        },
+        {
+          "value": "secondary-background",
+          "label": "Secondary background color"
+        }
+      ],
+      "default": "foreground",
+      "label": "Button text color"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Calendly CTA",
+      "settings": {
+        "accent_text": "Schedule a Call",
+        "heading": "Let's Talk",
+        "text": "<p>Book a 30-minute call to discuss your project.</p>",
+        "button_text": "Schedule a Call",
+        "calendly_url": "https://calendly.com/magnus-creativeoak/30min"
+      }
+    }
+  ]
+}
+{% endschema %}
