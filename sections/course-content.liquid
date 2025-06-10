@@ -85,7 +85,7 @@
           {%- if section.settings.show_back_button -%}
             <div class="course-content__back">
               <a href="{{ section.settings.back_url | default: '/pages/courses' }}" class="button button--secondary">
-                ← Tilbage til kurser
+                ← Tilbage til forløb
               </a>
             </div>
           {%- endif -%}
@@ -94,13 +94,13 @@
     {%- else -%}
       <div class="course-content__not-found">
         <h1 class="course-content__title h1">
-          Kursus ikke fundet
+          Forløb ikke fundet
         </h1>
         <p>
-          Det kursus du leder efter kunne ikke findes.
+          Det forløb du leder efter kunne ikke findes.
         </p>
         <a href="{{ section.settings.back_url | default: '/pages/courses' }}" class="button">
-          Tilbage til kurser
+          Tilbage til forløb
         </a>
       </div>
     {%- endif -%}

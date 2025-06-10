@@ -80,6 +80,9 @@
   display: flex;
   margin-left: auto;
   margin-right: auto;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .footer__content-bottom-wrapper--center {
@@ -258,6 +261,7 @@
   display: block;
   margin-bottom: 1rem;
   font-size: 1.1rem;
+  text-align: center;
 }
 
 .footer__copyright .copyright__content a {
@@ -287,24 +291,29 @@
 }
 
 /* Policies List */
-.policies {
-  display: inline;
-}
-
-.policies li {
+.policies.list-unstyled {
   display: inline-flex;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.policies li::before {
+.policies.list-unstyled li {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+}
+
+.policies.list-unstyled li::before {
   content: '\00B7';
   padding: 0 0.8rem;
 }
 
-.policies li a {
-  padding: 0.6rem 0;
-  display: block;
+.policies.list-unstyled li a {
+  padding: 0;
+  display: inline-block;
 }
 
 /* Animations */
@@ -372,7 +381,7 @@
   .footer__content-bottom-wrapper {
     flex-wrap: wrap;
     row-gap: 2.5rem;
-    justify-content: flex-start;
+    justify-content: center;
   }
   
   .footer__content-bottom.scroll-trigger.animate--slide-in {
@@ -450,9 +459,8 @@
     padding-right: calc(2rem / var(--font-body-scale));
   }
 
-  .footer__copyright {
-    text-align: left;
-    margin-top: 2.5rem;
+  .footer__copyright .copyright__content {
+    text-align: center;
   }
 
   .footer-logo-container {
@@ -494,6 +502,40 @@
 
   .footer__payment {
     margin-top: 2.5rem;
+  }
+
+  .footer__copyright .policies {
+    display: block;
+  }
+
+  .footer__copyright .policies li {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .footer__copyright .policies li::before {
+    display: none;
+  }
+
+  .footer__copyright .policies li:last-child {
+    margin-bottom: 0;
+  }
+
+  .policies.list-unstyled {
+    display: block;
+  }
+
+  .policies.list-unstyled li {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .policies.list-unstyled li::before {
+    display: none;
+  }
+
+  .policies.list-unstyled li:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -596,6 +638,22 @@
     padding-top: 0;
   }
   
+  .policies {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+
+  .policies li {
+    display: inline-flex;
+    margin: 0;
+  }
+
+  .policies li::before {
+    content: '\00B7';
+    padding: 0 0.8rem;
+  }
+
   .policies li a {
     padding: 0;
   }
@@ -624,6 +682,46 @@
   /* Remove hover effect from non-link text */
   .footer-company-info .rte p:hover {
     color: rgba(var(--color-foreground), 0.75);
+  }
+
+  .footer__content-bottom-wrapper {
+    justify-content: center;
+  }
+
+  .policies.list-unstyled {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .policies.list-unstyled li {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+
+  .policies.list-unstyled li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -0.8rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 1.2em;
+    background-color: rgba(var(--color-foreground), 0.2);
+  }
+
+  .policies.list-unstyled li a {
+    padding: 0;
+    display: inline-block;
+  }
+
+  .footer__copyright .copyright__content {
+    text-align: center;
   }
 }
 
