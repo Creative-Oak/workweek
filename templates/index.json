@@ -109,6 +109,24 @@
         "padding_bottom": 36
       }
     },
+    "custom_cta_calendly_FqA97C": {
+      "type": "custom-cta-calendly",
+      "name": "Calendly CTA",
+      "settings": {
+        "image": "shopify://shop_images/37269_A.jpg",
+        "accent_text": "Schedule a Call",
+        "heading": "Let's Talk",
+        "text": "<p>Book a 30-minute call to discuss your project.</p>",
+        "button_text": "Schedule a Call",
+        "calendly_url": "https://calendly.com/magnus-creativeoak/30min",
+        "button_style_secondary": false,
+        "show_button_arrow": false,
+        "button_text_color": "foreground",
+        "color_scheme": "scheme-a941145f-9e8a-44e9-a898-c62799066b72",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "testimonials_WU7HDq": {
       "type": "testimonials",
       "blocks": {
@@ -227,6 +245,7 @@
     "text_content_JrFEHW",
     "featured_courses_eYfUq6",
     "custom_cta_JnG7r9",
+    "custom_cta_calendly_FqA97C",
     "testimonials_WU7HDq",
     "featured_course_pwCcKc",
     "featured_blog_Jx8nAG"
