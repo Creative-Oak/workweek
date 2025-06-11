@@ -52,6 +52,7 @@
         "text_DXViDt",
         "button_xMRaAW"
       ],
+      "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
@@ -76,32 +77,22 @@
         "padding_bottom": 36
       }
     },
-    "custom_cta_WwiMdP": {
-      "type": "custom-cta",
-      "name": "Custom CTA",
+    "custom_cta_calendly_xpAdMa": {
+      "type": "custom-cta-calendly",
+      "name": "Calendly CTA",
       "settings": {
-        "image": "shopify://shop_images/37635_A.jpg",
-        "accent_text": "Nogle gange har man bare brug for at tale med et menneske, der forstår.",
-        "heading": "Sådan booker du",
-        "text": "<p>Tryk på knappen herunder for at vælge en tid i kalenderen. </p><p></p><p>Du modtager en bekræftelse og link til online mødet, når din booking er gennemført.</p><p></p>",
-        "button_text": "Book en tid",
-        "button_link": "https://calendly.com/magnus-creativeoak/30min",
+        "image": "shopify://shop_images/37269_A.jpg",
+        "accent_text": "Schedule a Call",
+        "heading": "Let's Talk",
+        "text": "<p>Book a 30-minute call to discuss your project.</p>",
+        "button_text": "Book en samtale",
+        "calendly_url": "https://calendly.com/magnus-creativeoak/30min",
         "button_style_secondary": false,
         "show_button_arrow": true,
         "button_text_color": "background",
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-4",
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "custom_liquid_GRYWiA": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<!-- Calendly link widget begin -->\n<link href=\"https://assets.calendly.com/assets/external/widget.css\" rel=\"stylesheet\">\n<script src=\"https://assets.calendly.com/assets/external/widget.js\" type=\"text/javascript\" async></script>\n<a href=\"\" onclick=\"Calendly.initPopupWidget({url: 'https://calendly.com/magnus-creativeoak/30min'});return false;\">Schedule time with me</a>\n<!-- Calendly link widget end -->",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
       }
     }
   },
@@ -109,7 +100,6 @@
     "main",
     "rich_text_FeRkw4",
     "text_content_Cbrdm8",
-    "custom_cta_WwiMdP",
-    "custom_liquid_GRYWiA"
+    "custom_cta_calendly_xpAdMa"
   ]
 }
