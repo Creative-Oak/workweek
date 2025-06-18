@@ -15,7 +15,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Er du klar til dit næste skridt?",
+            "heading": "Er du klar til næste skridt?",
             "heading_size": "h0"
           }
         },
@@ -46,8 +46,8 @@
         "button"
       ],
       "settings": {
-        "image": "shopify://shop_images/37536_A.jpg",
-        "image_overlay_opacity": 40,
+        "image": "shopify://shop_images/DSCF9179.jpg",
+        "image_overlay_opacity": 30,
         "mobile_image_overlay_opacity": 30,
         "image_height": "large",
         "image_behavior": "none",
