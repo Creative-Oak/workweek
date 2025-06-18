@@ -19,6 +19,26 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  /* Calendly close button styles */
+  .calendly-popup-close,
+  .calendly-close-overlay,
+  .calendly-close-overlay:empty {
+    display: block !important;
+    visibility: visible !important;
+  }
+
+  .calendly-popup-close:before,
+  .calendly-popup-close:after {
+    display: block !important;
+    visibility: visible !important;
+  }
+
+  .calendly-close-overlay:before,
+  .calendly-close-overlay:after {
+    display: block !important;
+    visibility: visible !important;
+  }
 {%- endstyle -%}
 
 {{ 'section-custom-cta.css' | asset_url | stylesheet_tag }}
@@ -55,7 +75,15 @@
       {%- if button_text != blank -%}
         <a
           href=""
-          onclick="Calendly.initPopupWidget({url: '{{ calendly_url }}'});return false;"
+          onclick="Calendly.initPopupWidget({
+            url: '{{ calendly_url }}',
+            text: '{{ button_text }}',
+            color: '#00a2ff',
+            textColor: '#ffffff',
+            branding: true,
+            hideEventTypeDetails: false,
+            hideLandingPageDetails: false
+          });return false;"
           class="button custom-cta-button color-{{ section.settings.color_scheme }}{% if section.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}{% if section.settings.button_text_color != 'foreground' %} button--text-{{ section.settings.button_text_color }}{% endif %}"
         >
           {{- button_text -}}
