@@ -19,6 +19,14 @@
             "text_style": "uppercase"
           }
         },
+        "inventory_bDkzFY": {
+          "type": "inventory",
+          "settings": {
+            "text_style": "body",
+            "inventory_threshold": 0,
+            "show_inventory_quantity": true
+          }
+        },
         "title": {
           "type": "title",
           "settings": {}
@@ -54,6 +62,7 @@
       },
       "block_order": [
         "vendor",
+        "inventory_bDkzFY",
         "title",
         "price",
         "variant_picker",
