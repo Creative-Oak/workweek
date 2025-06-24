@@ -15,14 +15,14 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Er du klar til næste skridt?",
+            "heading": "På vej til nyt job?",
             "heading_size": "h0"
           }
         },
         "text_AGMnDB": {
           "type": "text",
           "settings": {
-            "text": "WorkWeek er skabt med omtanke for dig, der har oplevet, hvor svært det kan være at finde fodfæste igen. Vi møder dig med empati, erfaring og et stærkt ønske om at støtte dig videre – uden pres.",
+            "text": "Du har brug for et arbejdsliv, der giver energi og mening. Og lader dig bidrage med til allerbedste.",
             "text_style": "subtitle"
           }
         },
