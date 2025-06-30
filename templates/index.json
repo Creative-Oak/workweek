@@ -81,9 +81,9 @@
       "settings": {
         "collection": "forloeb",
         "products_to_show": 3,
-        "title": "Workshops og online forløb",
+        "title": "Workshops, samtaler og online forløb",
         "heading_size": "h1",
-        "description": "<p>Måske er du mest til at arbejde på egen hånd. Så kan du kigge på de online forløb. Eller måske vil du gerne være sammen med andre om processen. Så er en workshop nok noget for dig.</p><p>Men må jeg foreslå, at du kigger på begge muligheder, det er jo indholdet og det, du får ud af undervisningen, som er det vigtigste.</p>",
+        "description": "<p>Du kan finde lige præcist den måde at arbejde på, som passer bedst til dig her. </p><p>For mange er det de personlige coachingssamtaler, der flytter allermest - fordi du har brug for at nogen lytter til dig, forstår, hvad du kommer fra og kan guide dig til, hvordan du kommer videre. </p><p>Eller måske er du mest til at arbejde på egen hånd. Så kan du kigge på de online forløb som klæder dig helt konkret på til at gå efter det job, som passer allerbedst itl dig. </p><p>Eller måske vil du gerne være sammen med andre om processen. Så er en workshop nok noget for dig.</p><p>Det vigtigste er, at du kommer i gang - så du kan komme videre. For at have et arbejdsliv, man trives i, er afgørende for at både vi og de mennesker, vi har i vores liv, trives.</p>",
         "show_description": false,
         "description_style": "body",
         "columns_desktop": 2,
