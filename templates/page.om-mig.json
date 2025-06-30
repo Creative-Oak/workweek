@@ -23,8 +23,8 @@
       "settings": {
         "accent_text": "Det kræver mod at starte forfra – og du behøver ikke gøre det alene.",
         "accent_color": "1",
-        "heading": "Hvorfor WorkWeek?",
-        "content": "<p>Mit navn er Ulla Kaspersen, og jeg har stiftet WorkWeek for at hjælpe kvinder med at finde tilbage til arbejdslivet på deres egne præmisser. Efter selv at have oplevet stress tæt på, ved jeg, hvor svært det kan være at rejse sig igen. Men jeg ved også, at det er muligt. Hos WorkWeek skaber jeg et trygt rum, hvor der er plads til både sårbarhed, håb og nye begyndelser.</p>",
+        "heading": "Hvorfor Workweek?",
+        "content": "<p>Jeg hedder Ulla, og det er mig, der står bag Workweek. Her får du lidt af min historie, så du ved, hvorfor jeg jeg arbejder med det, jeg gør.</p><p>Gennem mange år har jeg arbejdet med nogenlunde det, som jeg hjælper dig med i dag hos Workweek. Nemlig at guide dig derhen, hvor du befinder dig allerbedst i arbejdslivet. Det gør jeg, fordi jeg er overbevidst om, at vi allesammen får meget bedre liv, når vi kommer hjem fra arbejde med et smil på læben og overskud til os selv og dem, vi har i vores liv. Jeg har set det hos så mange, og bestemt også hos mig selv, at det er altafgørende for, at vi har et ordentligt liv, at vi også har et ordentligt arbejdsliv.</p><p>Det har jeg ikke altid haft selv og jeg har lært meget at det, jeg kan i dag, på den hårde måde. Haft stress helt inde på livet, har været sygemeldt og er blevet alt for længe i jobs, som ikke var gode for mig - fordi jeg troede, at jeg bare skulle tage mig sammen og knokle mig igennem. Troet, at det blev bedre lige om lidt, at det var mig, der skulle blive bedre til et eller andet. </p><p>Jeg har betalt en høj pris for det. Men den indsigt, jeg har i dag, er det hele værd. Og derfor er det min allerstørste glæde at hjælpe andre til arbejdsliv, de stortrives i. </p><p>Noget af det vigtigste, jeg kan sige til dig, hvis du er i et job, som du ikke trives i, det er: det er ikke din skyld, og du kan ændre det og komme et bedre sted hen.</p>",
         "width": "narrow",
         "color_scheme": "1",
         "padding_top": 100,
@@ -43,7 +43,10 @@
         "button_link": "",
         "button_style_secondary": false,
         "show_button_arrow": false,
-        "color_scheme": ""
+        "button_text_color": "foreground",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "featured_blog_iCFW6M": {
